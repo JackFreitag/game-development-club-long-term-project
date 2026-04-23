@@ -3,13 +3,13 @@
 ### 👥 Project Leadership
 * **Technical Director & Lead Architect:** [Dr. Richard B. Johnson](https://github.com/rbjohns8)
 * **Lead Programmer:** [Mathew R. Carter](https://github.com/TuxTheAstronaut)
-* **Producer / VP:** [Jack Freitag](https://github.com/JackFreitag)
+* **Producer:** [Jack Freitag](https://github.com/JackFreitag)
+* **Art Director:** [Brendan "BeanBoi"](https://github.com/BeanBoiOfficial)
+* **Narrative Lead:** Jackson "Error404"
 
-<!--
 ### ⚙️ Active Developers (Contributors)
-* *Brenden R.* - (Currently focused on: *Health UI Spike*)
-* *Ryan* - (Focused on: *Score Tracker*)
-!-->
+* *Ryan* - Composer
+
 This repository serves as the central documentation and architectural hub for the UNCG Game Development Club's primary multi-year project.
 
 ---
