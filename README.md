@@ -9,6 +9,8 @@
 
 ### ⚙️ Contributors
 * *Ryan* - Composer
+* *Alex J* - Narrative Designer
+* *Nathaniel* - Narrative Designer
 * *Grant Ellison* - Programmer
 
 This repository serves as the central documentation and architectural hub for the UNCG Game Development Club's primary multi-year project.
