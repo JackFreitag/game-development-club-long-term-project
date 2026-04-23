@@ -7,8 +7,9 @@
 * **Art Director:** [Brendan "BeanBoi"](https://github.com/BeanBoiOfficial)
 * **Narrative Lead:** Jackson "Error404"
 
-### ⚙️ Active Developers (Contributors)
+### ⚙️ Contributors
 * *Ryan* - Composer
+* *Grant Ellison* - Programmer
 
 This repository serves as the central documentation and architectural hub for the UNCG Game Development Club's primary multi-year project.
 
