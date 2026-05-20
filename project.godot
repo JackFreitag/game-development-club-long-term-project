@@ -30,6 +30,10 @@ file_logging/max_log_files=1
 
 display_server/driver.linuxbsd="wayland"
 
+[dotnet]
+
+project/assembly_name="Game Dev Club Game"
+
 [editor]
 
 run/main_run_args="--show-fps"

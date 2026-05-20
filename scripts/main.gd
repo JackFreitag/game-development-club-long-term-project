@@ -6,7 +6,7 @@ signal game_state_changed (int : game_states)
 signal refresh_settings ()
 # Variables
 enum game_states {Idle,Paused,Active}
-var game_state := game_states.Idle
+var game_state := game_states.Active
 var current_fps : int = Engine.max_fps
 var gamepad_id : int = 0
 
@@ -28,9 +28,6 @@ func _init() -> void:
 			platform.set_script(load("res://scripts/platforms/web.gd"))
 	
 	if not OS.is_userfs_persistent() : push_error("File system persistence unavailable!")
-
-#func _ready():
-#	$FadeLayer/AnimationPlayer.play("fade_in")
 
 func _enter_tree() -> void:
 	if DisplayServer.get_name() == "headless" : get_tree().quit()
@@ -71,18 +68,4 @@ func display_fps() -> void:
 	var frame_counter = load("res://ui/debug/fps_counter.tscn").instantiate()
 	add_child(frame_counter)
 
-"""
-func game_over():
-	await get_tree().create_timer(3.0).timeout
-	
-	# 1. Play the animation
-#	$FadeLayer/AnimationPlayer.play("fade_to_black")
-	
-	# 2. Wait for the animation to finish
-#	await $FadeLayer/AnimationPlayer.animation_finished
-	
-	# 3. Now reload the game
-	get_tree().reload_current_scene()
-	
-"""
 #endregion
