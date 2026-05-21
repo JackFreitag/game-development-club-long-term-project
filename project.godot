@@ -28,6 +28,8 @@ file_logging/max_log_files=1
 
 [display]
 
+window/size/window_width_override=1280
+window/size/window_height_override=720
 display_server/driver.linuxbsd="wayland"
 
 [dotnet]

@@ -5,6 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	player.death.connect(reset)
+	Main.set_gamestate(Main.game_states.Active)
 
 func reset() -> void:
 	await get_tree().create_timer(5).timeout

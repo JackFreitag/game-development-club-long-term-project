@@ -6,7 +6,7 @@ signal game_state_changed (int : game_states)
 signal refresh_settings ()
 # Variables
 enum game_states {Idle,Paused,Active}
-var game_state := game_states.Active
+var game_state := game_states.Idle
 var current_fps : int = Engine.max_fps
 var gamepad_id : int = 0
 

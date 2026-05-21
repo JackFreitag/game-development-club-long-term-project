@@ -2,11 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://bjjg7det2itp7" path="res://ui/fonts/dogica_pixel_bold.ttf" id="2_2dpu2"]
 [ext_resource type="Script" uid="uid://qqxalna318im" path="res://scripts/ui/game_menu.gd" id="2_laoif"]
+[ext_resource type="Theme" uid="uid://b2j543mgbgjdl" path="res://assets/resources/ui_theme.res" id="2_ug41u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_laoif"]
 font = ExtResource("2_2dpu2")
 font_size = 64
-font_color = Color(1, 1, 1, 0.5019608)
+font_color = Color(1, 1, 1, 0.78431374)
 
 [node name="GameMenu" type="CanvasLayer" unique_id=1767346670]
 process_mode = 3
@@ -19,6 +20,69 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_ug41u")
+
+[node name="PauseContainer" type="Control" parent="ButtonsContainer" unique_id=395898057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="ButtonsContainer/PauseContainer" unique_id=662700528]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -132.0
+offset_right = 128.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2dpu2")
+theme_override_font_sizes/font_size = 32
+text = "Resume"
+
+[node name="Restart" type="Button" parent="ButtonsContainer/PauseContainer" unique_id=1137218535]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2dpu2")
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+
+[node name="Quit" type="Button" parent="ButtonsContainer/PauseContainer" unique_id=161313588]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 61.0
+offset_right = 128.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2dpu2")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
 
 [node name="PauseLabel" type="Label" parent="." unique_id=590821337]
 anchors_preset = -1
@@ -40,4 +104,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.39215687)
+color = Color(0, 0, 0, 0.5019608)
+
+[connection signal="pressed" from="ButtonsContainer/PauseContainer/Resume" to="." method="_on_menu_button_pressed" binds= [&"Resume"]]
+[connection signal="pressed" from="ButtonsContainer/PauseContainer/Restart" to="." method="_on_menu_button_pressed" binds= [&"Restart"]]
+[connection signal="pressed" from="ButtonsContainer/PauseContainer/Quit" to="." method="_on_menu_button_pressed" binds= [&"Quit"]]
