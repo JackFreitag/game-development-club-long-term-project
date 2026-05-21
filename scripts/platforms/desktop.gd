@@ -12,6 +12,10 @@ func  _enter_tree() -> void:
 		print('Display: ' + DisplayServer.get_name())
 	
 	print("")
+	
+	if OS.get_cmdline_args().has("--no-limit"): return
+	get_window().focus_entered.connect(_on_window_focus_changed.bind(true))
+	get_window().focus_exited.connect(_on_window_focus_changed.bind(false))
 
 func set_min_win_size() -> void:
 	await get_tree().process_frame
@@ -90,23 +94,19 @@ func _on_game_state_changed(state : Main.game_states) -> void:
 		Main.game_states.Active:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 
-# Pause game if window is unfocused and lower fps
-func _notification(what : int) -> void:
-	if OS.get_cmdline_args().has("--no-limit"): return
-	match what:
-		NOTIFICATION_WM_WINDOW_FOCUS_OUT:
-			if Main.game_state == Main.game_states.Active:
-				Main.set_gamestate(Main.game_states.Paused)
-			if !OS.low_processor_usage_mode:
-				Main.current_fps = Engine.max_fps
-
-			Engine.max_fps = 10
-			OS.low_processor_usage_mode = true
-			DisplayServer.screen_set_keep_on(false)
-
-		NOTIFICATION_APPLICATION_FOCUS_IN:
-			OS.low_processor_usage_mode = false
-			DisplayServer.screen_set_keep_on(true)
-			Engine.max_fps = Main.current_fps
+func _on_window_focus_changed(has_focus : bool) -> void:
+	if has_focus:
+		OS.low_processor_usage_mode = false
+		DisplayServer.screen_set_keep_on(true)
+		Engine.max_fps = Main.current_fps
+	else:
+		if Main.game_state == Main.game_states.Active:
+			Main.set_gamestate(Main.game_states.Paused)
+		if !OS.low_processor_usage_mode:
+			Main.current_fps = Engine.max_fps
+		
+		Engine.max_fps = 10
+		OS.low_processor_usage_mode = true
+		DisplayServer.screen_set_keep_on(false)
 
 #endregion
