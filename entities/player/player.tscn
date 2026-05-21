@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://iji6kubl20t3" path="res://scripts/components/camera.gd" id="4_bls4j"]
 [ext_resource type="PackedScene" uid="uid://dv65al7lyd1yu" path="res://assets/prefabs/body_fsm.tscn" id="6_8fjmc"]
 [ext_resource type="PackedScene" uid="uid://blejtpw18blt3" path="res://ui/menus/player_hud.tscn" id="7_qiwj3"]
+[ext_resource type="PackedScene" uid="uid://ba3yy0j6ulshu" path="res://ui/menus/game_menu.tscn" id="8_26q78"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sglur"]
 
@@ -478,5 +479,8 @@ script = ExtResource("4_bls4j")
 [node name="BodyFSM" parent="." unique_id=1732092856 instance=ExtResource("6_8fjmc")]
 
 [node name="PlayerHud" parent="." unique_id=1905799776 instance=ExtResource("7_qiwj3")]
+
+[node name="GameMenu" parent="." unique_id=1767346670 instance=ExtResource("8_26q78")]
+visible = false
 
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]

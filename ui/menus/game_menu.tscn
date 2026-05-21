@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ba3yy0j6ulshu"]
 
-[ext_resource type="Theme" uid="uid://b2j543mgbgjdl" path="res://assets/resources/ui_theme.res" id="1_ud3gl"]
 [ext_resource type="FontFile" uid="uid://bjjg7det2itp7" path="res://ui/fonts/dogica_pixel_bold.ttf" id="2_2dpu2"]
 [ext_resource type="Script" uid="uid://qqxalna318im" path="res://scripts/ui/game_menu.gd" id="2_laoif"]
 
@@ -9,26 +8,19 @@ font = ExtResource("2_2dpu2")
 font_size = 64
 font_color = Color(1, 1, 1, 0.5019608)
 
-[node name="GameMenu" type="Control" unique_id=344150288]
+[node name="GameMenu" type="CanvasLayer" unique_id=1767346670]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_ud3gl")
+layer = 2
 script = ExtResource("2_laoif")
 
 [node name="ButtonsContainer" type="Control" parent="." unique_id=1605907399]
-layout_mode = 1
+layout_mode = 3
 anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PauseLabel" type="Label" parent="." unique_id=590821337]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 1.0
@@ -42,7 +34,6 @@ vertical_alignment = 1
 
 [node name="Background" type="ColorRect" parent="." unique_id=377462703]
 show_behind_parent = true
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
