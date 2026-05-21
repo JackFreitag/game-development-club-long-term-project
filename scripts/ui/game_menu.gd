@@ -10,8 +10,8 @@ func state_changed(state : Main.game_states) -> void:
 		Main.game_states.Active:
 			self.hide()
 
-func _on_menu_button_pressed(button: StringName) -> void:
-	match button:
+func _on_menu_button_pressed(action: StringName) -> void:
+	match action:
 		'Resume':
 			Main.set_gamestate(Main.game_states.Active)
 		'Restart':
