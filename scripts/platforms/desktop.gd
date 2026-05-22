@@ -13,7 +13,7 @@ func  _enter_tree() -> void:
 	
 	print("")
 	
-	if OS.get_cmdline_args().has("--no-limit"): return
+	if OS.get_cmdline_args().has("--keep-active"): return
 	get_window().focus_entered.connect(_on_window_focus_changed.bind(true))
 	get_window().focus_exited.connect(_on_window_focus_changed.bind(false))
 
