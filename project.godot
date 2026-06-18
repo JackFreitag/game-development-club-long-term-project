@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Game Dev Club Game"
 run/main_scene="uid://dqdtdl2fa2y7e"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 run/flush_stdout_on_print=true
 boot_splash/image="uid://dxk7uqxqy3l4q"
 config/icon="res://icon.svg"
@@ -77,6 +77,10 @@ action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[input_devices]
+
+joypads/ignore_joypad_on_unfocused_application=true
 
 [layer_names]
 
