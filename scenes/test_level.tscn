@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://coyqn671c8x0q" path="res://entities/player/player.tscn" id="1_2venv"]
 [ext_resource type="Script" uid="uid://57p4qvsbru1q" path="res://scripts/level.gd" id="1_4asn1"]
-[ext_resource type="Texture2D" uid="uid://dgyijpoiw8w4i" path="res://assets/sprites/temp_sprites/HospitalFloorTILEMAPS.png" id="2_dw7u0"]
+[ext_resource type="Texture2D" uid="uid://dgyijpoiw8w4i" path="res://assets/sprites/temp_sprites/hospital_floor.png" id="2_dw7u0"]
 [ext_resource type="Texture2D" uid="uid://cmebfj1ovhbsm" path="res://assets/sprites/temp_sprites/props1.png" id="2_paw1w"]
 [ext_resource type="PackedScene" uid="uid://ddofh18fctxbv" path="res://entities/enemies/large_skeleton.tscn" id="3_j6w7d"]
 [ext_resource type="PackedScene" uid="uid://dy38vgb5rwiup" path="res://entities/enemies/crab.tscn" id="3_x4b8f"]
