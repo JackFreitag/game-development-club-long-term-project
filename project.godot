@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Dev Club Game"
-run/main_scene="uid://dqdtdl2fa2y7e"
+run/main_scene="uid://chc6t4d0drt2o"
 config/features=PackedStringArray("4.7", "Mobile")
 run/flush_stdout_on_print=true
 boot_splash/image="uid://dxk7uqxqy3l4q"

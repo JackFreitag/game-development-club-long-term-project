@@ -17,4 +17,5 @@ func _on_menu_button_pressed(action: StringName) -> void:
 		'Restart':
 			get_tree().call_deferred('change_scene_to_file', str(get_tree().current_scene.scene_file_path))
 		'Quit':
-			get_tree().quit()
+			get_tree().call_deferred('change_scene_to_file', 'res://ui/menus/main_menu.tscn')
+			Main.set_gamestate(Main.game_states.Idle)

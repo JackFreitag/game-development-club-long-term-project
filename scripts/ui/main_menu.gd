@@ -1,11 +1,9 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_menu_button_pressed(action: StringName) -> void:
+	match action:
+		'Play':
+			get_tree().call_deferred('change_scene_to_file', 'res://scenes/test_level.tscn')
+			Main.set_gamestate(Main.game_states.Active)
+		'Quit':
+			get_tree().quit()
